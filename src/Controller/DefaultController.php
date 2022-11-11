@@ -10,6 +10,8 @@ class DefaultController extends AbstractController
   #[Route('/', name: 'home_page')]
   public function index()
   {
-    return $this->render('home.html.twig');
+    return $this->render('home.html.twig', [
+      'navbar' => 'dark'
+    ]);
   }
 }
