@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-  #[Route('/', name: 'home_page')]
+  #[Route('/admin', name: 'admin_home')]
   public function index()
   {
-    return $this->render('home.html.twig', [
-      'navbar' => 'dark'
-    ]);
+    return $this->render('admin/home.html.twig');
   }
 }
