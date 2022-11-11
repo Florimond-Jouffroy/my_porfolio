@@ -17,11 +17,14 @@
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
-	<body>
-
-		{% include "partials/_navbar.html.twig" %}
-
-		{% block body %}{% endblock %}
-		{% include "partials/_footer.html.twig" %}
-	</body>
-</html>
+	<body id="admin">
+		{% include "admin/partials/_header.html.twig" %}
+		<div class="container-fluid">
+			<div class="row">
+				{% include "admin/partials/_navbar.html.twig" %}
+				<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> {% block body %}{% endblock %}
+					</main>
+				</div>
+			</div>
+		</body>
+	</html>
